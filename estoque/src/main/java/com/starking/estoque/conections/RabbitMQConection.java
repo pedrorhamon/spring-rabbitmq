@@ -9,7 +9,7 @@ import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.stereotype.Component;
 
-import com.starking.estoque.constantes.RabbitMQConstantes;
+import com.starking.librabbitmq.constantes.RabbitMQConstantes;
 
 @Component
 public class RabbitMQConection {

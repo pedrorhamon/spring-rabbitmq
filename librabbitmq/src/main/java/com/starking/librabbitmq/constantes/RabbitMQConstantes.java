@@ -1,4 +1,4 @@
-package com.starking.estoque.constantes;
+package com.starking.librabbitmq.constantes;
 
 public class RabbitMQConstantes {
 	
