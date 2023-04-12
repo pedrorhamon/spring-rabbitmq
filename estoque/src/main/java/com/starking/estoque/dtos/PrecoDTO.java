@@ -7,6 +7,6 @@ public class PrecoDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	public String codigoProduto;
-	public String quantidade;
+	public Double preco;
 
 }
