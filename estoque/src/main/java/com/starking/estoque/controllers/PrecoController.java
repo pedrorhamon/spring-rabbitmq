@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.starking.estoque.services.RabbitMQService;
-import com.starking.librabbitmq.constantes.RabbitMQConstantes;
-import com.starking.librabbitmq.dtos.PrecoDTO;
+
+import constantes.RabbitmqConstantes;
+import dto.PrecoDto;
 
 @RestController
 @RequestMapping("preco")
@@ -20,8 +21,8 @@ public class PrecoController {
 	private RabbitMQService service;
 	
 	@PutMapping
-	private ResponseEntity alteraPreco(@RequestBody PrecoDTO precoDTO) {
-		this.service.enviaMensagem(RabbitMQConstantes.FILA_PRECO, precoDTO);
+	private ResponseEntity alteraPreco(@RequestBody PrecoDto precoDTO) {
+		this.service.enviaMensagem(RabbitmqConstantes.FILA_PRECO, precoDTO);
 		return new ResponseEntity(HttpStatus.OK);
 	}
 

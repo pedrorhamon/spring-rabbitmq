@@ -6,11 +6,11 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.8</version>
+		<version>2.5.5</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.starking</groupId>
-	<artifactId>estoque</artifactId>
+	<artifactId>consumidor-estoque</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>consumidor-estoque</name>
 	<description>Estoque project for Spring Boot</description>
@@ -18,53 +18,35 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
+	 <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+    </dependency>
 
-		<dependency>
-			<groupId>
-				org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-amqp</artifactId>
+    </dependency>
+           
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+    </dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.rabbitmq/amqp-client -->
-		<dependency>
-			<groupId>
-				com.rabbitmq</groupId>
-			<artifactId>amqp-client</artifactId>
-		</dependency>
+    <dependency>
+      <groupId>org.librabbitmq</groupId>
+      <artifactId>librabbitmq</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
 
-		<!--
-		https://mvnrepository.com/artifact/org.springframework.amqp/spring-amqp -->
-		<dependency>
-			<groupId>
-				org.springframework.amqp</groupId>
-			<artifactId>spring-rabbit</artifactId>
-		</dependency>
+  </dependencies>
 
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.starking.librabbitmq</groupId>
-			<artifactId>librabbitmq</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
-
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>
-					org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>
