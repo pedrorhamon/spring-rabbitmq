@@ -13,7 +13,7 @@ amqp.connect({
             .then((canal) => {
                 canal.consume(fila, (mensagem) => {
                     console.log(mensagem.content.toString());
-                })
+                }, {noAck: true})
             })
             .catch((erro) => console.log(erro))
     })
